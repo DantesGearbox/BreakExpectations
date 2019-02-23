@@ -12,10 +12,10 @@ public class CharacterController2D : MonoBehaviour {
 	//Unity components
 	Rigidbody2D rb;
 	BoxCollider2D boxColl;
-	//ScaleWithVelocity scale;
+	// ScaleWithVelocity scale;
 
 	//Physics variables - We set these
-	private float maxJumpHeight = 3.5f;                 // If this could be in actual unity units somehow, that would be great
+	private float maxJumpHeight = 4.5f;                 // If this could be in actual unity units somehow, that would be great
 	private float minJumpHeight = 0.5f;                 // If this could be in actual unity units somehow, that would be great
 	private float timeToJumpApex = 0.25f;               // This is in actual seconds
 	private float maxMovespeed = 10;					// If this could be in actual unity units per second somehow, that would be great
@@ -45,7 +45,7 @@ public class CharacterController2D : MonoBehaviour {
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
 		boxColl = GetComponent<BoxCollider2D>();
-		//scale = GetComponentInChildren<ScaleWithVelocity>();
+		// scale = GetComponentInChildren<ScaleWithVelocity>();
 		SetupMoveAndJumpSpeed();
 	}
 
@@ -171,6 +171,6 @@ public class CharacterController2D : MonoBehaviour {
 		decceleration = maxMovespeed / deccelerationTime;
 
 		//Set variables for the velocity scaling
-		//scale.SetMaxYSpeed(maxJumpVelocity);
+		// scale.SetMaxYSpeed(maxJumpVelocity);
 	}
 }
