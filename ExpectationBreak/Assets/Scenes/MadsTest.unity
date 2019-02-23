@@ -381,10 +381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f01f7d20b91c542ac1176231dc1d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 100
-  deceleration: 50
+  acceleration: 13.125
+  deceleration: 13.125
   dirChangeAcceleration: 30
-  maxVelocity: 17
+  maxVelocity: 6
   analogMaxVelocity:
     serializedVersion: 2
     m_Curve: []
@@ -394,14 +394,14 @@ MonoBehaviour:
   accelerationType: 0
   decelerationType: 0
   dirChangeType: 0
-  gravity: 5
-  terminalVelocity: 99
-  jumpTakeoff: {x: 0, y: 0, z: 0}
+  gravity: 75
+  terminalVelocity: 17.25
+  jumpTakeoff: {x: 0, y: 13.75, z: 0}
   absoluteTakeoff: 0
-  minimumJumpTime: 0.1
+  minimumJumpTime: 0
   holdingJumpAllowed: 0
-  jumpTakeoffAdd: {x: 0, y: 0, z: 0}
-  jumpTakeoffAddVelocity: 0
+  jumpTakeoffAdd: {x: 0, y: 0.5, z: 0}
+  jumpTakeoffAddVelocity: 4
   jumpHorizontalVelocityFactor: 0
   jumpShortDistance: 0
   jumpShortPenalty: 0
@@ -414,17 +414,17 @@ MonoBehaviour:
   jumpForceAdditiveMinimum: 0
   instantBreakOnRelease: 0
   dragOnJumpRelease: {x: 0, y: 0, z: 0}
-  accelerationAir: 150
+  accelerationAir: 13.125
   decelerationAir: 0
-  airDirChangeAcceleration: 0
-  maxVelocityAir: 17.5
+  airDirChangeAcceleration: 30
+  maxVelocityAir: 6
   minVelocityAirHold: 0
   minVelocityAirHoldInputFactor: 0
   dampDirectionChange: 0
   minVelocityAirRelease: 0
   decelerationAirReleaseHorizontal: {x: 0, y: 0, z: 0}
   preventHorizontalRepress: 0
-  collisionWidth: 0.5
+  collisionWidth: 0.821
   collisionHeight: 1
   deadZoneX: 0.5
   deadZoneAirX: 0.5
@@ -445,11 +445,11 @@ MonoBehaviour:
   runDistance: 0
   defaultMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   platformMask:
     serializedVersion: 2
-    m_Bits: 0
-  visuals: {fileID: 0}
+    m_Bits: 257
+  visuals: {fileID: 1894005296}
   simulator: {fileID: 0}
 --- !u!4 &774523779
 Transform:
