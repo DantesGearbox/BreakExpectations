@@ -6,11 +6,13 @@ public class GoldBehavior : MonoBehaviour{
 
 	ParticleSystem ps;
 	SpriteRenderer sr;
+	PlaySounds playSounds;
 
 	bool dead = false;
 
 	// Start is called before the first frame update
 	void Start() {
+		playSounds = FindObjectOfType<PlaySounds>();
 		sr = GetComponent<SpriteRenderer>();
 		ps = GetComponent<ParticleSystem>();
 	}
@@ -20,6 +22,7 @@ public class GoldBehavior : MonoBehaviour{
 		if (!dead) {
 			sr.enabled = false;
 			ps.Play();
+			playSounds.PlayPling();
 			dead = true;
 		}
 

@@ -12,6 +12,7 @@ public class CharacterController2D : MonoBehaviour {
 	//Unity components
 	Rigidbody2D rb;
 	BoxCollider2D boxColl;
+	PlaySounds playSounds;
 	// ScaleWithVelocity scale;
 
 	//Physics variables - We set these
@@ -46,6 +47,7 @@ public class CharacterController2D : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		boxColl = GetComponent<BoxCollider2D>();
 		// scale = GetComponentInChildren<ScaleWithVelocity>();
+		playSounds = FindObjectOfType<PlaySounds>();
 		SetupMoveAndJumpSpeed();
 	}
 
@@ -108,6 +110,7 @@ public class CharacterController2D : MonoBehaviour {
 				rb.velocity = new Vector2(rb.velocity.x, 0);
 				rb.velocity += new Vector2(0, maxJumpVelocity);
 
+				playSounds.PlayJump();
 			}
 		} else {
 			if (rb.velocity.y > minJumpVelocity) {
